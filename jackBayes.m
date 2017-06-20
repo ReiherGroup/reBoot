@@ -5,6 +5,8 @@
 % |('blrMode'), and a structure of optional input ('calOpt'). It returns 
 % |jackknifed estimates of prediction uncertainty ('jRMPV') obtained from
 % |Bayesian linear regression.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function jRMPV = jackBayes(x,y,u,M,blrMode,calOpt)

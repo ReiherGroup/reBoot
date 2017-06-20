@@ -1,7 +1,9 @@
 % |----------------------------------------------------------------------------
-% |'add' is a function. It takes a N x 1 vector of the input variable ('x')
-% |and the polynomial degree ('M'). It returns a N x (M + 1) design matrix 
-% |where the m-th column refers to x.^(m - 1).
+% |'add' is a function. It takes a N x 1 vector of the input variable ('x') and
+% |the polynomial degree ('M'). It returns a N x (M + 1) design matrix where 
+% |the m-th column refers to x.^(m - 1).
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function X = add(x,M)

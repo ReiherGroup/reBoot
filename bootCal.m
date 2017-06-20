@@ -19,6 +19,8 @@
 % |jackknifed covariance matrices ('full.jack.cov'), and N root-mean-square
 % |deviations of the jackknifed samples versus the original sample
 % |('full.jack.df').
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function [model full] = bootCal(x,y,u,M,B,calOpt)

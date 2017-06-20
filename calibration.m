@@ -11,6 +11,8 @@
 % |model perspective, whereas the right plot represents the residual 
 % |perspective (with respect to the bootstrapped mean). If target uncertainties
 % |are provided, error bars will be plotted in addition.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function [MPU models full] = calibration(x,y,u,M,B,calOpt,calPlot)
@@ -59,10 +61,10 @@ function [MPU models full] = calibration(x,y,u,M,B,calOpt,calPlot)
 
   RMSE = LSR(x,y,u,M,@OLS,calOpt).RMSE;
 
-  MPU.RMSE = roundResult(RMSE,calOpt.resolution);
-  MPU.R632 = roundResult(boot.R632,calOpt.resolution);
-  MPU.RMPV = roundResult(bayes.RMPV,calOpt.resolution);
-  MPU.RLOO = roundResult(loo.RLOO,calOpt.resolution);
+  MPU.RMSE = roundResult(RMSE,calOpt);
+  MPU.R632 = roundResult(boot.R632,calOpt);
+  MPU.RMPV = roundResult(bayes.RMPV,calOpt);
+  MPU.RLOO = roundResult(loo.RLOO,calOpt);
 
   models.boot  = boot;
   models.bayes = bayes;

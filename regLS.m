@@ -4,6 +4,8 @@
 % |('calOpt.reglsPenalty'). It returns a (M + 1) x 1 parameter vector 
 % |('model.mean') by applying the method of linear regularized least-squares 
 % |(regLS) linear regression.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function model = regLS(data,calOpt)

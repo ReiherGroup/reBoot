@@ -6,6 +6,8 @@
 % |(M + 1) x 1 parameter vector ('model.mean') and the model discrepancy
 % |('model.d') by applying the method of linear iteratively reweighted 
 % |least-squares (IRLS) regression.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function model = IRLS(data,calOpt)
