@@ -3,6 +3,8 @@
 % |an arbitrary vector ('list'), the entries of which are unique and can range
 % |from 1 to N. It returns a matrix that equals z, but with the rows removed
 % |defined in list.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function f = remove(z,list);

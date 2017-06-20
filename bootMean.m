@@ -3,6 +3,8 @@
 % |dimension 2 or larger and the number of bootstrap samples ('B'). It returns
 % |the deviation of the bootstrapped mean from that of the original sample
 % |('stats.bias') and the variance of all bootstrap-sample means ('stats.var').
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function stats = bootMean(z,B)

@@ -5,6 +5,8 @@
 % |returns bootstrapped ('pdf.hist') and Gaussian ('pdf.bayes') probability
 % |density functions and the corresponding abscissae ('pdf.abscissaHist' and
 % |'pdf.abscissaBayes', respectively).
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function pdf = bootHist(w,bayes)

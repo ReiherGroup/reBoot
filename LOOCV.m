@@ -8,6 +8,8 @@
 % |('model.RLOO'), scaling factors ('model.mx' and 'model.sx') employed to
 % |tranform 'x' according to x = (x - model.mx) / model.sx, and (if target
 % |uncertainties are provided) the mean target uncertainty (model.mu).
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function [model jack] = LOOCV(x,y,u,M,calOpt)

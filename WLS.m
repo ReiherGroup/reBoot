@@ -3,6 +3,8 @@
 % |N x 1 target vector ('data.y'), and a N x 1 target-uncertainty vector 
 % |('data.u'). It returns a (M + 1) x 1 parameter vector ('model.mean') by 
 % |applying the method of linear weighted least-squares (WLS) regression.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function model = WLS(data)

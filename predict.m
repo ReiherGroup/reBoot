@@ -8,6 +8,8 @@
 % |predicted target value(s) ('result.y'), and (if the 'model' was obtained 
 % |from either 'bootCal' or 'bayesCal') the predicted target-uncertainty 
 % |value(s) ('result.u').
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function result = predict(x0,model,calOpt)
@@ -36,11 +38,11 @@ function result = predict(x0,model,calOpt)
   %%% actual code starts here %%%
 
   result.x = x0;
-  result.y = roundResult(X0 * model.mean,calOpt.resolution);
+  result.y = roundResult(X0 * model.mean,calOpt);
 
   if isfield(model,'cov')
     result.u = roundResult(sqrt(model.noise + diag(X0 * model.cov * X0')),...
-               calOpt.resolution);
+               calOpt);
   end
 
 end

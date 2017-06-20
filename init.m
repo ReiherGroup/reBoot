@@ -1,7 +1,9 @@
 % |----------------------------------------------------------------------------
-% |The init.m script needs to be run prior to any other application of reBoot.
-% |It clears previous sessions, provides information on the reBoot toolbox,
-% |and prepares the reference data set required for calibration.
+% |The init.m script needs to be executed prior to any other application of 
+% |reBoot. It clears previous sessions, provides information on the reBoot 
+% |toolbox,and starts the input processing.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 close all;
@@ -18,7 +20,7 @@ disp("|Address : ETH Zurich, Vladimir-Prelog-Weg 2, 8093 Zurich, Switzerland");
 disp("|Contact : reboot@phys.chem.ethz.ch");
 disp("|Website : www.reiher.ethz.ch/software/reboot.html");
 disp("|Purpose : Statistical calibration of property models");
-disp("|Cite us : J. Proppe, M. Reiher, arXiv:1703.01685 (2017)");
+disp("|Cite us : J. Proppe, M. Reiher, DOI: 10.1021/acs.jctc.7b00235");
 disp("|------------------------------------------------------------------------------");
 disp("");
 

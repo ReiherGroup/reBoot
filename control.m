@@ -1,9 +1,9 @@
 % |----------------------------------------------------------------------------
-% |The control.m script defines all essential variables (default values) if
-% |not already done by the user via the setting.m script, and checks whether
+% |The control.m script defines all essential variables (default values) if not
+% |already done by the user via the setting.m script, and checks whether
 % |definitions made by the user (setting.m) are erroneous.
-% |For a detailed introduction to all variables see the reBoot manual 
-% |available via https://www.reiher.ethz.ch/software/reboot.html.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 if ~exist('inputOpt');

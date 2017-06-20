@@ -1,9 +1,11 @@
 % |----------------------------------------------------------------------------
-% |If inputOpt.randomData is activated (true), N random data triples are 
-% |generated. The generating model is a polynomial of degree M, the M + 1 
-% |parameters of which are drawn from a normal distribution. The target values 
-% |are drawn from the generating model with normally distributed noise.
-% |To date, we only implemented random data generation for dimInput = 1.
+% |If inputOpt.randomData = true, N random data triples are generated. The 
+% |generating model is a polynomial of degree M, the M + 1 parameters of which 
+% |are drawn from a normal distribution. The target values are drawn from the 
+% |generating model with normally distributed noise. Currently, we only provide
+% |random data generation for dimInput = 1.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 x = sort(unifrnd(-1,1,N,1));

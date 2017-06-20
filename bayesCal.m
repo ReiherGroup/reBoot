@@ -15,6 +15,8 @@
 % |model.alpha equals the initial guess of alpha in the evidence approximation.
 % |If blrMode = 2, then model.alpha equals the converged value of alpha
 % |obtained from the evidence approximation.
+% |For more details, consult the reBoot manual available at
+% |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
 function model = bayesCal(x,y,u,M,blrMode,calOpt)
