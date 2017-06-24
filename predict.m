@@ -38,11 +38,11 @@ function result = predict(x0,model,calOpt)
   %%% actual code starts here %%%
 
   result.x = x0;
-  result.y = roundResult(X0 * model.mean,calOpt);
+  result.y = roundResult(X0 * model.mean,calOpt.resolution);
 
   if isfield(model,'cov')
     result.u = roundResult(sqrt(model.noise + diag(X0 * model.cov * X0')),...
-               calOpt);
+               calOpt.resolution);
   end
 
 end
