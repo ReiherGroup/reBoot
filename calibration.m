@@ -61,10 +61,10 @@ function [MPU models full] = calibration(x,y,u,M,B,calOpt,calPlot)
 
   RMSE = LSR(x,y,u,M,@OLS,calOpt).RMSE;
 
-  MPU.RMSE = roundResult(RMSE,calOpt);
-  MPU.R632 = roundResult(boot.R632,calOpt);
-  MPU.RMPV = roundResult(bayes.RMPV,calOpt);
-  MPU.RLOO = roundResult(loo.RLOO,calOpt);
+  MPU.RMSE = roundResult(RMSE,calOpt.resolution);
+  MPU.R632 = roundResult(boot.R632,calOpt.resolution);
+  MPU.RMPV = roundResult(bayes.RMPV,calOpt.resolution);
+  MPU.RLOO = roundResult(loo.RLOO,calOpt.resolution);
 
   models.boot  = boot;
   models.bayes = bayes;

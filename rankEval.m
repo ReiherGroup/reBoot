@@ -90,15 +90,15 @@ function ranking = rankEval(x,y,u,M,list,B,calOpt,calPlot)
   end
 
   if ~isempty(calOpt.resolution)
-    if ~prod(roundResult(u,calOpt) > 0)
-      u(~roundResult(u,calOpt)) = 10^(-calOpt.resolution);  
+    if ~prod(roundResult(u,calOpt.resolution) > 0)
+      u(~roundResult(u,calOpt.resolution)) = 10^(-calOpt.resolution);  
     end
     calOpt.resolution += calOpt.increase;
   end
 
   N = length(x);
-  y = roundResult(y,calOpt);
-  u = roundResult(u,calOpt);
+  y = roundResult(y,calOpt.resolution);
+  u = roundResult(u,calOpt.resolution);
   
   dimInput = size(x,2);
 
@@ -122,16 +122,16 @@ function ranking = rankEval(x,y,u,M,list,B,calOpt,calPlot)
       end
 
       if ~isempty(u)
-        Y = roundResult(normrnd(y(R) + dy,u(R) + du),calOpt);
+        Y = roundResult(normrnd(y(R) + dy,u(R) + du),calOpt.resolution);
       else
         Y = y(R) + dy;
       end
 
       for i = 1:dimInput   
         RMSE(i,1) = roundResult(sqrt(mean((Y - X(R,:,i) * ...
-	                        (X(R,:,i) \ Y)).^2)),calOpt);
+	                        (X(R,:,i) \ Y)).^2)),calOpt.resolution);
         RMPV(i,1) = roundResult(bayesCal(x(R,i),Y,[],M,1,calOpt).RMPV, ...
-	                        calOpt);
+	                        calOpt.resolution);
       end
 
       ranking.RMSE(:,b,c) = (min(RMSE) == RMSE);

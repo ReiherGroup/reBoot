@@ -33,7 +33,7 @@ if inputOpt.expUncertainty
     y = D(:,end - 1);
     u = D(:,end);
   else
-    mu = roundResult(sqrt(mean((D(D(:,end) ~= 0,end)).^2)),calOpt);
+    mu = roundResult(sqrt(mean((D(D(:,end) ~= 0,end)).^2)),calOpt.resolution);
     D(D(:,end) == 0,end) += mu;
     u = D(:,end);
     clear('mu');
