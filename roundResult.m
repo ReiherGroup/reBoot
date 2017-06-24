@@ -6,7 +6,7 @@
 % |<http://www.reiher.ethz.ch/software/reboot/manual.pdf>.
 % |----------------------------------------------------------------------------
 
-function f = roundResult(z,calOpt)
+function f = roundResult(z,resolution)
 
   %%% input inspection %%%
 
